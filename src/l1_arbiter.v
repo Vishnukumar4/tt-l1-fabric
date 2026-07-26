@@ -1,4 +1,3 @@
-`timescale 1ns/1ps
 
 module l1_arbiter (
     // Master 0: DMA Engine (High Priority Streamer)

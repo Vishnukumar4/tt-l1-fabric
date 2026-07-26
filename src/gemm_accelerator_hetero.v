@@ -1,4 +1,3 @@
-`timescale 1ns/1ps
 
 module gemm_accelerator_hetero (
     input  wire          clk,

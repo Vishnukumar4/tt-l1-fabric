@@ -122,6 +122,7 @@ module tt_um_vperumal_l1_fabric (
 
     // ---- DMA Engine ----------------------------------------
     wire [31:0] stream_data;
+    wire [31:0] dma_reg_rdata_unused;
     wire        stream_valid, dma_done_irq;
     wire        gemm_stream_ready;
 
@@ -131,7 +132,7 @@ module tt_um_vperumal_l1_fabric (
         .reg_addr     (cpu_addr),
         .reg_we       (is_dma),
         .reg_wdata    (wr_accum),
-        .reg_rdata    (),
+        .reg_rdata    (dma_reg_rdata_unused),
         .scm_addr     (dma_scm_addr),
         .scm_rdata    (fabric_rdata[31:0]),
         .stream_data  (stream_data),
