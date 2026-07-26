@@ -42,8 +42,10 @@ module gemm_accelerator_hetero (
             tile_full <= 1'b0; // default: no tile this cycle
 
             if (stream_wvalid && stream_wready) begin
+`ifndef SYNTHESIS
                 $display("[%0t ns] [GEMM L1] Streaming into Bank %s Row %0d data=0x%08x",
                           $time, active_write_bank ? "B" : "A", write_ptr, stream_wdata);
+`endif
 
                 if (active_write_bank == 1'b0) bank_A[write_ptr] <= stream_wdata;
                 else                           bank_B[write_ptr] <= stream_wdata;
@@ -52,7 +54,9 @@ module gemm_accelerator_hetero (
                     write_ptr         <= 2'b00;
                     active_write_bank <= ~active_write_bank;
                     tile_full         <= 1'b1; // tile complete -- MAC can fire next cycle
+`ifndef SYNTHESIS
                     $display("[%0t ns] [GEMM L1] Tile FULL -- swapping banks", $time);
+`endif
                 end else begin
                     write_ptr <= write_ptr + 2'b01;
                 end
@@ -80,7 +84,9 @@ module gemm_accelerator_hetero (
                 // active_write_bank already swapped, so completed bank = active_write_bank
                 if (active_write_bank == 1'b1) begin
                     // Bank A was just completed
+`ifndef SYNTHESIS
                     $display("[%0t ns] [GEMM MAC] Computing on Bank A", $time);
+`endif
                     computed_mac_result <= computed_mac_result +
                         (bank_A[0][15:0] * bank_A[0][31:16]) +
                         (bank_A[1][15:0] * bank_A[1][31:16]) +
@@ -88,7 +94,9 @@ module gemm_accelerator_hetero (
                         (bank_A[3][15:0] * bank_A[3][31:16]);
                 end else begin
                     // Bank B was just completed
+`ifndef SYNTHESIS
                     $display("[%0t ns] [GEMM MAC] Computing on Bank B", $time);
+`endif
                     computed_mac_result <= computed_mac_result +
                         (bank_B[0][15:0] * bank_B[0][31:16]) +
                         (bank_B[1][15:0] * bank_B[1][31:16]) +
