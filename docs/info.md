@@ -29,8 +29,18 @@ All operations are driven through ui_in:
 
 Write a word: mode=00, drive each byte on uio (byte_sel 0,1,2,3).
 The write commits on byte 3. Read it back with mode=01: the selected
-byte appears on uio_out. Trigger DMA with mode=10 and observe
-dma_grant (uo_out[5]) assert while cpu_grant (uo_out[4]) drops.
+byte appears on uio_out.
+
+In DMA mode (10), byte_sel selects the DMA register: 0=source
+address, 1=transfer length, 2=start. The register is written with
+the value currently in the 32-bit write accumulator (fill it first
+with a mode-00 write sequence). A transfer streams bank-0 words into
+the GEMM unit; dma_grant (uo_out[5]) asserts during the transfer and
+gemm_done_irq (uo_out[7]) fires when the MAC completes.
+
+In GEMM mode (11), byte_sel=0 presents the accumulated MAC result:
+the low byte on uio_out and its low nibble on uo_out[3:0]. Example:
+weight 0x00030002 streamed 4 times gives 4x(2x3) = 0x18.
 
 ## External hardware
 

@@ -31,6 +31,15 @@ async def read_word(dut, bank, word):
         await ClockCycles(dut.clk, 2)
     return value
 
+async def dma_cmd(dut, bsel):
+    from cocotb.triggers import FallingEdge, ClockCycles
+    await FallingEdge(dut.clk)
+    dut.ui_in.value = (0b10 << 6) | (0b00 << 4) | (bsel << 2) | 0b00
+    await ClockCycles(dut.clk, 2)
+    await FallingEdge(dut.clk)
+    dut.ui_in.value = IDLE
+    await ClockCycles(dut.clk, 2)
+
 @cocotb.test()
 async def test_l1_fabric(dut):
     clock = Clock(dut.clk, 20, units="us")
@@ -103,5 +112,24 @@ async def test_l1_fabric(dut):
     assert await read_word(dut, 0, 0) == 0
     out = int(dut.uo_out.value)
     assert (out >> 6) & 1 == 0 and (out >> 7) & 1 == 0
+
+    # T11: GEMM end-to-end — DMA streams bank0 into MAC
+    await write_word(dut, 0, 0, 0x00030002)   # weight: 2*3=6 per beat
+    await write_word(dut, 3, 3, 0x00000000)   # wr_accum := 0
+    await dma_cmd(dut, 0)                     # DMA reg 0x00: src = 0
+    await write_word(dut, 3, 3, 0x00000004)   # wr_accum := 4
+    await dma_cmd(dut, 1)                     # DMA reg 0x04: length = 4
+    await write_word(dut, 3, 3, 0x00000001)   # wr_accum := 1
+    await dma_cmd(dut, 2)                     # DMA reg 0x08: START
+    await ClockCycles(dut.clk, 30)            # 4 beats + MAC latency
+    out = int(dut.uo_out.value)
+    assert (out >> 7) & 1 == 1, "gemm_done_irq did not fire"
+    await FallingEdge(dut.clk)
+    dut.ui_in.value = 0xC0                    # GEMM mode, byte_sel=0
+    await Timer(500, units="ns")
+    assert int(dut.uio_out.value) == 0x18, \
+        f"MAC result byte {hex(int(dut.uio_out.value))} != 0x18"
+    assert (int(dut.uo_out.value) & 0xF) == 0x8, "gemm_result nibble != 8"
+    dut.ui_in.value = IDLE
 
     dut._log.info("ALL COCOTB TESTS PASSED")

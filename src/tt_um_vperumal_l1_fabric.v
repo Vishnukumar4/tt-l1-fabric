@@ -86,7 +86,7 @@ module tt_um_vperumal_l1_fabric (
     // Map to 32-bit addr for arbiter compatibility
     wire [31:0] cpu_addr = commit_we ?
         {26'h0, commit_bank, 2'h0, commit_word} :
-        {26'h0, bank_sel,   2'h0, word_sel};
+        {26'h0, bank_sel, byte_sel, word_sel};
     wire [31:0] dma_addr = {26'h0, bank_sel, 2'h0, word_sel};
 
     l1_arbiter u_arbiter (
@@ -148,7 +148,7 @@ module tt_um_vperumal_l1_fabric (
     gemm_accelerator_hetero u_gemm (
         .clk           (clk),
         .rst_n         (rst_n),
-        .reg_addr      (cpu_addr),
+        .reg_addr      (32'h00005000 | {26'h0, byte_sel, 2'b00}),
         .reg_we        ((mode == 2'b11) && ena),
         .reg_wdata     (wr_accum),
         .reg_rdata     (gemm_rdata),

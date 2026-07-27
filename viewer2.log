@@ -1,0 +1,207 @@
+﻿2026-07-26T23:55:53.8048253Z Current runner version: '2.336.0'
+2026-07-26T23:55:53.8068063Z ##[group]Runner Image Provisioner
+2026-07-26T23:55:53.8068765Z Hosted Compute Agent
+2026-07-26T23:55:53.8069317Z Version: 20260707.563
+2026-07-26T23:55:53.8069823Z Commit: 02667638d2b423fbc733a8e32a88b44996a3ba6e
+2026-07-26T23:55:53.8070382Z Build Date: 2026-07-07T19:33:50Z
+2026-07-26T23:55:53.8070984Z Worker ID: {49d76961-0091-4ef3-8f80-ffc515dfdbfd}
+2026-07-26T23:55:53.8071551Z Azure Region: westus3
+2026-07-26T23:55:53.8072058Z ##[endgroup]
+2026-07-26T23:55:53.8073216Z ##[group]Operating System
+2026-07-26T23:55:53.8073726Z Ubuntu
+2026-07-26T23:55:53.8074204Z 24.04.4
+2026-07-26T23:55:53.8074624Z LTS
+2026-07-26T23:55:53.8075052Z ##[endgroup]
+2026-07-26T23:55:53.8075547Z ##[group]Runner Image
+2026-07-26T23:55:53.8076026Z Image: ubuntu-24.04
+2026-07-26T23:55:53.8076568Z Version: 20260720.247.2
+2026-07-26T23:55:53.8077619Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260720.247/images/ubuntu/Ubuntu2404-Readme.md
+2026-07-26T23:55:53.8078853Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260720.247
+2026-07-26T23:55:53.8079644Z ##[endgroup]
+2026-07-26T23:55:53.8080572Z ##[group]GITHUB_TOKEN Permissions
+2026-07-26T23:55:53.8082028Z Metadata: read
+2026-07-26T23:55:53.8082788Z Pages: write
+2026-07-26T23:55:53.8083348Z ##[endgroup]
+2026-07-26T23:55:53.8085001Z Secret source: Actions
+2026-07-26T23:55:53.8085919Z Prepare workflow directory
+2026-07-26T23:55:53.8351779Z Prepare all required actions
+2026-07-26T23:55:53.8386587Z Getting action download info
+2026-07-26T23:55:54.1067714Z Download action repository 'TinyTapeout/tt-gds-action@ttsky26c' (SHA:30d38a7dfc6fda561d452b196fc822af0332ec23)
+2026-07-26T23:55:54.5205821Z Getting action download info
+2026-07-26T23:55:54.6379334Z Download action repository 'actions/download-artifact@v7' (SHA:37930b1c2abaa49bbe596cd826c3c89aef350131)
+2026-07-26T23:55:55.7151239Z Download action repository 'actions/upload-pages-artifact@v4' (SHA:7b1f4a764d45c48632c6b24a0339c27f5614fb0b)
+2026-07-26T23:55:56.1185412Z Download action repository 'actions/deploy-pages@v5' (SHA:cd2ce8fcbc39b97be8ca5fce6e763baed58fa128)
+2026-07-26T23:55:57.1971428Z Getting action download info
+2026-07-26T23:55:57.3042661Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-07-26T23:55:57.7736474Z Complete job name: viewer
+2026-07-26T23:55:57.8294526Z ##[group]Run TinyTapeout/tt-gds-action/viewer@ttsky26c
+2026-07-26T23:55:57.8295067Z ##[endgroup]
+2026-07-26T23:55:57.8414287Z ##[group]Run actions/download-artifact@v7
+2026-07-26T23:55:57.8414541Z with:
+2026-07-26T23:55:57.8414704Z   name: tt_submission
+2026-07-26T23:55:57.8414889Z   merge-multiple: false
+2026-07-26T23:55:57.8415090Z   repository: Vishnukumar4/tt-l1-fabric
+2026-07-26T23:55:57.8415307Z   run-id: 30224949079
+2026-07-26T23:55:57.8415488Z ##[endgroup]
+2026-07-26T23:55:57.9603462Z Downloading single artifact
+2026-07-26T23:55:58.1901506Z Preparing to download the following artifacts:
+2026-07-26T23:55:58.1902957Z - tt_submission (ID: 8638416484, Size: 6040454, Expected Digest: sha256:0e3ecb3420226b93af4772f6ccaf3e81c819101b8f96e294f8377727b4719317)
+2026-07-26T23:55:58.5893743Z Redirecting to blob download url: https://productionresultssa18.blob.core.windows.net/actions-results/674272d0-8bae-482c-a050-85bfadc2254c/workflow-job-run-4d64380f-4040-55ae-833d-bf58ba0fcbed/artifacts/a6af0e44e710fc652ee9cedf71e70f3e4b8573b2544ca1bf1bfd1d234fbf113f.zip
+2026-07-26T23:55:58.5895388Z Starting download of artifact to: /home/runner/work/tt-l1-fabric/tt-l1-fabric
+2026-07-26T23:55:58.8490214Z (node:1924) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-07-26T23:55:58.8491022Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-26T23:55:59.5181334Z SHA256 digest of downloaded artifact is 0e3ecb3420226b93af4772f6ccaf3e81c819101b8f96e294f8377727b4719317
+2026-07-26T23:55:59.5182146Z Artifact download completed successfully.
+2026-07-26T23:55:59.5182573Z Total of 1 artifact(s) downloaded
+2026-07-26T23:55:59.5184744Z Download artifact has finished successfully
+2026-07-26T23:55:59.5335716Z ##[group]Run PDK=$(jq -r '.PDK' pdk.json)
+2026-07-26T23:55:59.5336038Z [36;1mPDK=$(jq -r '.PDK' pdk.json)[0m
+2026-07-26T23:55:59.5336310Z [36;1mecho "PDK=$PDK" >> $GITHUB_ENV[0m
+2026-07-26T23:55:59.5377719Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-07-26T23:55:59.5378028Z ##[endgroup]
+2026-07-26T23:55:59.5510659Z ##[group]Run actions/download-artifact@v7
+2026-07-26T23:55:59.5510914Z with:
+2026-07-26T23:55:59.5511094Z   name: gds_render
+2026-07-26T23:55:59.5511326Z   path: gh-pages
+2026-07-26T23:55:59.5511529Z   merge-multiple: false
+2026-07-26T23:55:59.5511758Z   repository: Vishnukumar4/tt-l1-fabric
+2026-07-26T23:55:59.5512013Z   run-id: 30224949079
+2026-07-26T23:55:59.5512193Z env:
+2026-07-26T23:55:59.5512543Z   PDK: sky130A
+2026-07-26T23:55:59.5512736Z ##[endgroup]
+2026-07-26T23:55:59.6639694Z Downloading single artifact
+2026-07-26T23:55:59.9073055Z Preparing to download the following artifacts:
+2026-07-26T23:55:59.9073865Z - gds_render (ID: 8638419253, Size: 1160513, Expected Digest: sha256:d23364d99bc74d53eae1af1773b17ea4fd79d1828aa6a2bfc029d4d663c02f7c)
+2026-07-26T23:56:00.3001457Z Redirecting to blob download url: https://productionresultssa18.blob.core.windows.net/actions-results/674272d0-8bae-482c-a050-85bfadc2254c/workflow-job-run-4d64380f-4040-55ae-833d-bf58ba0fcbed/artifacts/0e1a954b7b3f8d2236a31cdc1b2300f4a72eac2eb8cf449a0d14714be17507f8.zip
+2026-07-26T23:56:00.3003537Z Starting download of artifact to: /home/runner/work/tt-l1-fabric/tt-l1-fabric/gh-pages
+2026-07-26T23:56:00.5410259Z (node:1939) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+2026-07-26T23:56:00.5411149Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-26T23:56:00.9318688Z SHA256 digest of downloaded artifact is d23364d99bc74d53eae1af1773b17ea4fd79d1828aa6a2bfc029d4d663c02f7c
+2026-07-26T23:56:00.9319228Z Artifact download completed successfully.
+2026-07-26T23:56:00.9319579Z Total of 1 artifact(s) downloaded
+2026-07-26T23:56:00.9323274Z Download artifact has finished successfully
+2026-07-26T23:56:00.9408754Z ##[group]Run cp tt_submission/*.gds gh-pages/tinytapeout.gds
+2026-07-26T23:56:00.9409176Z [36;1mcp tt_submission/*.gds gh-pages/tinytapeout.gds[0m
+2026-07-26T23:56:00.9409504Z [36;1mcp tt_submission/*.oas gh-pages/tinytapeout.oas[0m
+2026-07-26T23:56:00.9447701Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-07-26T23:56:00.9447994Z env:
+2026-07-26T23:56:00.9448166Z   PDK: sky130A
+2026-07-26T23:56:00.9448338Z ##[endgroup]
+2026-07-26T23:56:00.9584774Z ##[group]Run cat << EOF >> gh-pages/index.html
+2026-07-26T23:56:00.9585091Z [36;1mcat << EOF >> gh-pages/index.html[0m
+2026-07-26T23:56:00.9585348Z [36;1m  <!DOCTYPE html>[0m
+2026-07-26T23:56:00.9585553Z [36;1m  <html lang="en">[0m
+2026-07-26T23:56:00.9585745Z [36;1m  <head>[0m
+2026-07-26T23:56:00.9585925Z [36;1m    <meta charset="UTF-8">[0m
+2026-07-26T23:56:00.9586230Z [36;1m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[0m
+2026-07-26T23:56:00.9586608Z [36;1m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[0m
+2026-07-26T23:56:00.9586968Z [36;1m    <title>Redirecting to 3D Viewer...</title>[0m
+2026-07-26T23:56:00.9587240Z [36;1m  </head>[0m
+2026-07-26T23:56:00.9587421Z [36;1m  <body>[0m
+2026-07-26T23:56:00.9587589Z [36;1m    <script>[0m
+2026-07-26T23:56:00.9588091Z [36;1m      location.href = "https://gds-viewer.tinytapeout.com/?pdk=sky130A&model=" + encodeURIComponent(location.href + '/tinytapeout.oas');[0m
+2026-07-26T23:56:00.9588626Z [36;1m    </script>[0m
+2026-07-26T23:56:00.9588810Z [36;1m  </body>[0m
+2026-07-26T23:56:00.9588978Z [36;1m  </html>[0m
+2026-07-26T23:56:00.9589288Z [36;1mEOF[0m
+2026-07-26T23:56:00.9623352Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-07-26T23:56:00.9623633Z env:
+2026-07-26T23:56:00.9623799Z   PDK: sky130A
+2026-07-26T23:56:00.9623982Z ##[endgroup]
+2026-07-26T23:56:00.9737170Z ##[group]Run actions/upload-pages-artifact@v4
+2026-07-26T23:56:00.9737502Z with:
+2026-07-26T23:56:00.9737696Z   path: gh-pages
+2026-07-26T23:56:00.9737898Z   name: github-pages
+2026-07-26T23:56:00.9738081Z   retention-days: 1
+2026-07-26T23:56:00.9738246Z env:
+2026-07-26T23:56:00.9738411Z   PDK: sky130A
+2026-07-26T23:56:00.9738576Z ##[endgroup]
+2026-07-26T23:56:00.9764203Z ##[group]Run echo ::group::Archive artifact
+2026-07-26T23:56:00.9764489Z [36;1mecho ::group::Archive artifact[0m
+2026-07-26T23:56:00.9764712Z [36;1mtar \[0m
+2026-07-26T23:56:00.9764919Z [36;1m  --dereference --hard-dereference \[0m
+2026-07-26T23:56:00.9765174Z [36;1m  --directory "$INPUT_PATH" \[0m
+2026-07-26T23:56:00.9765417Z [36;1m  -cvf "$RUNNER_TEMP/artifact.tar" \[0m
+2026-07-26T23:56:00.9765665Z [36;1m  --exclude=.git \[0m
+2026-07-26T23:56:00.9765868Z [36;1m  --exclude=.github \[0m
+2026-07-26T23:56:00.9766082Z [36;1m  --exclude=".[^/]*" \[0m
+2026-07-26T23:56:00.9766290Z [36;1m  .[0m
+2026-07-26T23:56:00.9766461Z [36;1mecho ::endgroup::[0m
+2026-07-26T23:56:00.9783576Z shell: /usr/bin/sh -e {0}
+2026-07-26T23:56:00.9783779Z env:
+2026-07-26T23:56:00.9783962Z   PDK: sky130A
+2026-07-26T23:56:00.9784142Z   INPUT_PATH: gh-pages
+2026-07-26T23:56:00.9784330Z ##[endgroup]
+2026-07-26T23:56:00.9812953Z ##[group]Archive artifact
+2026-07-26T23:56:00.9822510Z ./
+2026-07-26T23:56:00.9831393Z ./gds_render.png
+2026-07-26T23:56:00.9831591Z ./index.html
+2026-07-26T23:56:00.9831769Z ./tinytapeout.gds
+2026-07-26T23:56:00.9895403Z ./tinytapeout.oas
+2026-07-26T23:56:00.9901387Z ##[endgroup]
+2026-07-26T23:56:00.9944754Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-07-26T23:56:00.9945867Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-07-26T23:56:00.9946178Z with:
+2026-07-26T23:56:00.9946346Z   name: github-pages
+2026-07-26T23:56:00.9946748Z   path: /home/runner/work/_temp/artifact.tar
+2026-07-26T23:56:00.9946985Z   retention-days: 1
+2026-07-26T23:56:00.9947169Z   if-no-files-found: error
+2026-07-26T23:56:00.9947372Z   compression-level: 6
+2026-07-26T23:56:00.9947554Z   overwrite: false
+2026-07-26T23:56:00.9947734Z   include-hidden-files: false
+2026-07-26T23:56:00.9947932Z env:
+2026-07-26T23:56:00.9948105Z   PDK: sky130A
+2026-07-26T23:56:00.9948276Z ##[endgroup]
+2026-07-26T23:56:01.1210464Z (node:1959) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-26T23:56:01.1211548Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-26T23:56:01.1258673Z With the provided path, there will be 1 file uploaded
+2026-07-26T23:56:01.1259687Z Artifact name is valid!
+2026-07-26T23:56:01.1260209Z Root directory input is valid!
+2026-07-26T23:56:01.3990446Z Beginning upload of artifact content to blob storage
+2026-07-26T23:56:01.5954890Z (node:1959) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-07-26T23:56:02.2343610Z Uploaded bytes 3450932
+2026-07-26T23:56:02.2948254Z Finished uploading artifact content to blob storage!
+2026-07-26T23:56:02.2948895Z SHA256 digest of uploaded artifact zip is 3560fbdb7b3a50caab945e021ce3401ef9aab39fa6efc06243b27a18379a1ab8
+2026-07-26T23:56:02.2950705Z Finalizing artifact upload
+2026-07-26T23:56:02.4973891Z Artifact github-pages.zip successfully finalized. Artifact ID 8638641352
+2026-07-26T23:56:02.4975084Z Artifact github-pages has been successfully uploaded! Final size is 3450932 bytes. Artifact ID is 8638641352
+2026-07-26T23:56:02.4976154Z Artifact download URL: https://github.com/Vishnukumar4/tt-l1-fabric/actions/runs/30224949079/artifacts/8638641352
+2026-07-26T23:56:02.5108838Z ##[group]Run actions/deploy-pages@v5
+2026-07-26T23:56:02.5109074Z with:
+2026-07-26T23:56:02.5110882Z   token: ***
+2026-07-26T23:56:02.5111079Z   timeout: 600000
+2026-07-26T23:56:02.5111262Z   error_count: 10
+2026-07-26T23:56:02.5111455Z   reporting_interval: 5000
+2026-07-26T23:56:02.5111672Z   artifact_name: github-pages
+2026-07-26T23:56:02.5111887Z   preview: false
+2026-07-26T23:56:02.5112063Z env:
+2026-07-26T23:56:02.5112430Z   PDK: sky130A
+2026-07-26T23:56:02.5112613Z ##[endgroup]
+2026-07-26T23:56:02.6579150Z (node:1972) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-07-26T23:56:02.6579752Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-07-26T23:56:02.8664255Z Fetching artifact metadata for "github-pages" in this workflow run
+2026-07-26T23:56:03.0937010Z Found 7 artifact(s)
+2026-07-26T23:56:03.0958825Z ##[error]Fetching artifact metadata failed. Is githubstatus.com reporting issues with API requests, Pages, or Actions? Please re-run the deployment at a later time.
+2026-07-26T23:56:03.2249336Z ##[error]Error: Multiple artifacts named "github-pages" were unexpectedly found for this workflow run. Artifact count is 2.
+    at getArtifactMetadata (/home/runner/work/_actions/actions/deploy-pages/v5/src/internal/api-client.js:89:1)
+    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at Deployment.create (/home/runner/work/_actions/actions/deploy-pages/v5/src/internal/deployment.js:65:1)
+    at main (/home/runner/work/_actions/actions/deploy-pages/v5/src/index.js:30:1)
+2026-07-26T23:56:03.2253047Z ##[error]Error: Multiple artifacts named "github-pages" were unexpectedly found for this workflow run. Artifact count is 2.
+2026-07-26T23:56:03.2526562Z ##[group]Run echo "Failed to deploy to GitHub Pages, please follow the link to troubleshoot: https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part"
+2026-07-26T23:56:03.2527521Z [36;1mecho "Failed to deploy to GitHub Pages, please follow the link to troubleshoot: https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part"[0m
+2026-07-26T23:56:03.2528294Z [36;1m[0m
+2026-07-26T23:56:03.2528490Z [36;1mcat << EOF >> $GITHUB_STEP_SUMMARY[0m
+2026-07-26T23:56:03.2528737Z [36;1m# Error[0m
+2026-07-26T23:56:03.2529237Z [36;1mFailed to deploy to GitHub Pages. [Click here for instructions how to fix](https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part).[0m
+2026-07-26T23:56:03.2529777Z [36;1mEOF[0m
+2026-07-26T23:56:03.2529943Z [36;1m[0m
+2026-07-26T23:56:03.2530107Z [36;1mexit 1[0m
+2026-07-26T23:56:03.2568683Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-07-26T23:56:03.2568980Z env:
+2026-07-26T23:56:03.2569162Z   PDK: sky130A
+2026-07-26T23:56:03.2569342Z ##[endgroup]
+2026-07-26T23:56:03.2622081Z Failed to deploy to GitHub Pages, please follow the link to troubleshoot: https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part
+2026-07-26T23:56:03.2634726Z ##[error]Process completed with exit code 1.
+2026-07-26T23:56:03.2726107Z Cleaning up orphan processes
+2026-07-26T23:56:03.2968233Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
