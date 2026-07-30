@@ -4,7 +4,7 @@ project:
   discord:      ""
   description:  "4-bank heterogeneous L1 weight memory fabric with priority arbiter, DMA streaming engine, and weight-stationary GEMM MAC. Silicon demonstrator of an architecture verified at 33-bank scale with full Cadence RTL-to-GDS signoff (SDSU MS thesis)."
   language:     "Verilog"
-  clock_hz:     50000000
+  clock_hz:     40000000
 
   tiles: "4x2"
   top_module:  "tt_um_vperumal_l1_fabric"
