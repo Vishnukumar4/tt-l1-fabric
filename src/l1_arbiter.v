@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2026 Vishnukumar Varatharaja Perumal
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 
 module l1_arbiter (
     // Master 0: DMA Engine (High Priority Streamer)

@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2026 Vishnukumar Varatharaja Perumal
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 
 module gemm_accelerator_hetero (
     input  wire          clk,

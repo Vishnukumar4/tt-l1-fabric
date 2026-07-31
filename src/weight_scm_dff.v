@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2026 Vishnukumar Varatharaja Perumal
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 module weight_scm_dff (
     input  wire        clk,
     input  wire        rst_n,

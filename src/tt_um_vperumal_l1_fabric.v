@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2026 Vishnukumar Varatharaja Perumal
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 // ============================================================
 // tt_um_vperumal_l1_fabric.v
 // Tiny Tapeout TTSKY26c — Scalable L1 Memory Fabric
